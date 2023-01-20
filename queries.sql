@@ -109,10 +109,6 @@ FULL JOIN owners o ON o.id = a.owner_id;
 SELECT COUNT(a.name), s.name FROM animals a JOIN species s ON species_id = s.id
 GROUP BY s.name;
 
--- List all Digimon owned by Jennifer Orwell.
--- List all animals owned by Dean Winchester that haven't tried to escape.
--- Who owns the most animals?
-
 SELECT a.name FROM animals a 
 LEFT JOIN owners o ON o.id = a.owner_id
 LEFT JOIN species s ON s.id = a.species_id
