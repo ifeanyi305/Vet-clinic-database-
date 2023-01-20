@@ -1,16 +1,8 @@
-# curriculum-databases-projects-template
-
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
+## Vet Clinic
 
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
-
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
 <a name="readme-top"></a>
 
@@ -42,14 +34,11 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 >
 
-**[your_project__name]** is a...
+**[Vet clinic database]** is a relational database that stores datas of animals for example their age, species etc. in this project I also performed diferrent transactions and queries on the database.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
 
 <details>
 <summary>Database</summary>
@@ -64,9 +53,9 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **You can perform query for the number of animals in a database**
+- **You can perform multiple transactions on the database**
+- **you can join multiple tables**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -84,71 +73,46 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
 In order to run this project you need:
-
-<!--
-Example command:
-
-```sh
- gem install rails
-```
- -->
+ <ul>
+   <li>Postgres</li>
+   <li>Vscode</li>
+   <li>gem install rails</li>
+ </ul>
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+ cd my-folder
+  git clone https://github.com/ifeanyi305/Vet-clinic-database
 
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+ <ul>
+   <li>cd my-project</li>
+  <li>gem install</li>
+ </ul>
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
-```sh
   rails server
-```
---->
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
-```sh
   bin/rails test test/models/article_test.rb
-```
---->
+
 
 ### Deployment
 
@@ -172,15 +136,10 @@ Example:
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@ifeanyi305](https://github.com/ifeanyi305)
+- Twitter: [@ifeanyi305](https://twitter.com/ifeanyi2020)
+- LinkedIn: [oti joseph](https://www.linkedin.com/in/oti-joseph-ifeanyi/)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -190,9 +149,9 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- [ ] **add "join table" for visits.**
+- [ ] **database performance audit.**
+- [ ] **add database schema diagram.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
