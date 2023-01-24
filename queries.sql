@@ -154,11 +154,10 @@ SELECT COUNT(visits.animal_id) FROM visits JOIN animals ON visits.animal_id = an
 SELECT species_id from animals where id = (select animal_id from visits where vets_id = 2 group by animal_id order by count(animal_id) desc limit 1); 
 
 
-explain analyze SELECT COUNT(*) FROM visits where animal_id = 4;
-
 SELECT COUNT(*) FROM visits where animal_id = 4;
 SELECT * FROM visits where vets_id = 2;
 SELECT * FROM owners where email = 'owner_ 18327@mail.com';
 
-EXPLAIN ANALYZE SELECT * FROM owners;
-EXPLAIN ANALYZE SELECT * FROM visits;
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
