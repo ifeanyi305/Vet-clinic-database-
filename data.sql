@@ -92,3 +92,10 @@ INSERT INTO visits (animal_id, vets_id, date_of_visits) VALUES
 (4, 2, '2020-08-03'),
 (7, 3, '2020-05-24'),
 (7, 1, '2021-01-11');
+
+-- This will add 3.594.280 visits considering you have 10 animals, 4 vets, and it will use around ~87.000 timestamps (~4min approx.)
+INSERT INTO visits
+ (animal_id, vets_id, date_of_visits)
+  SELECT * FROM (SELECT id FROM animals)
+   animal_ids, (SELECT id FROM vets) 
+   vets_ids, generate_series('1980-01-01'::timestamp, '2021-01-01', '4 hours') visit_timestamp;

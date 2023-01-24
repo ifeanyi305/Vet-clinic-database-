@@ -58,3 +58,6 @@ ADD FOREIGN KEY (species_id) REFERENCES species(id);
 ALTER TABLE animals
 ADD COLUMN owner_id INT,
 ADD FOREIGN KEY (owner_id) REFERENCES owners(id);
+
+-- Add an email column to your owners table
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
