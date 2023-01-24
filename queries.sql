@@ -152,3 +152,10 @@ SELECT animals.name, vets.name, visits.date_of_visits FROM animals JOIN visits O
 SELECT COUNT(visits.animal_id) FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vets_id = vets.id LEFT JOIN specializations ON vets.id = specializations.vets_id LEFT JOIN species ON specializations.species_id = species.id WHERE species.id != animals.species_id;
 
 SELECT species_id from animals where id = (select animal_id from visits where vets_id = 2 group by animal_id order by count(animal_id) desc limit 1); 
+
+
+explain analyze SELECT COUNT(*) FROM visits where animal_id = 4;
+
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vets_id = 2;
+SELECT * FROM owners where email = 'owner_ 18327@mail.com';
