@@ -38,7 +38,12 @@ CREATE TABLE treatment (
   id     INT  GENERATED ALWAYS AS IDENTITY,
   type   VARCHAR(200) NOT NULL,
   name   VARCHAR(200) NOT NULL,
-  PRIMARY KEY(id)
+  PRIMARY KEY(id),
+  medical_history_id  INT,
+  CONSTRAINT invoice_fk 
+  FOREIGN KEY(medical_history_id)
+  REFERENCES Medical_history(id)
+  ON DELETE CASCADE
 );
 
 CREATE TABLE invoice_items (
@@ -59,4 +64,3 @@ CREATE TABLE invoice_items (
   PRIMARY KEY(id),
   INDEX (invoice_id, treatment_id) 
 );
-
