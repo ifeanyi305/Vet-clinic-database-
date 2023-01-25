@@ -143,7 +143,7 @@ SELECT vets.name, species.name FROM vets LEFT JOIN specializations ON vets.id = 
 
 SELECT animals.name FROM animals JOIN visits ON animals.id = visits.animal_id WHERE visits.vets_id = 3 AND visits.date_of_visits BETWEEN '2020-04-01' AND '2020-08-30';
 
-select animal_id, count(*) from visits group by animal_id order by count(animal_id) desc limit 1;
+SELECT animal_id, count(*) from visits group by animal_id order by count(animal_id) desc limit 1;
 
 SELECT vets.name FROM vets JOIN visits ON vets.id = visits.vets_id WHERE visits.animal_id = 2 ORDER BY visits.date_of_visits LIMIT 1;
 
@@ -151,4 +151,13 @@ SELECT animals.name, vets.name, visits.date_of_visits FROM animals JOIN visits O
 
 SELECT COUNT(visits.animal_id) FROM visits JOIN animals ON visits.animal_id = animals.id JOIN vets ON visits.vets_id = vets.id LEFT JOIN specializations ON vets.id = specializations.vets_id LEFT JOIN species ON specializations.species_id = species.id WHERE species.id != animals.species_id;
 
-select species_id from animals where id = (select animal_id from visits where vets_id = 2 group by animal_id order by count(animal_id) desc limit 1); 
+SELECT species_id from animals where id = (select animal_id from visits where vets_id = 2 group by animal_id order by count(animal_id) desc limit 1); 
+
+
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vets_id = 2;
+SELECT * FROM owners where email = 'owner_ 18327@mail.com';
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vets_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
