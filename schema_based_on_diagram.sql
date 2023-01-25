@@ -46,11 +46,11 @@ CREATE TABLE invoice_items (
   total_price  DECIMAL NOT NULL,
   invoice_id    INT,
   treatment_id  INT,
-   CONSTRAINT invoice_item_fk 
+  CONSTRAINT invoice_item_fk 
   FOREIGN KEY(invoice_id)
   REFERENCES Invoices(id)
   ON DELETE CASCADE,
-   CONSTRAINT treatment_fk
+  CONSTRAINT treatment_fk
   FOREIGN KEY(treatment_id)
   REFERENCES treatment(id)
   ON DELETE CASCADE,
