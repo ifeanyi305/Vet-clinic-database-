@@ -59,3 +59,4 @@ CREATE TABLE invoice_items (
   PRIMARY KEY(id),
   INDEX (invoice_id, treatment_id) 
 );
+
