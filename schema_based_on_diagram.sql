@@ -16,7 +16,8 @@ CREATE TABLE Medical_history (
   CONSTRAINT medical_fk 
   FOREIGN KEY(patient_id)
   REFERENCES patients(id)
-  ON DELETE CASCADE
+  ON DELETE CASCADE,
+  INDEX (patient_id)
 );
 
 CREATE TABLE Invoices (
@@ -29,7 +30,8 @@ CREATE TABLE Invoices (
   CONSTRAINT invoice_fk 
   FOREIGN KEY(medical_history_id)
   REFERENCES Medical_history(id)
-  ON DELETE CASCADE
+  ON DELETE CASCADE,
+  INDEX (medical_history_id)
 );
 
 CREATE TABLE treatment (
@@ -54,5 +56,6 @@ CREATE TABLE invoice_items (
   FOREIGN KEY(treatment_id)
   REFERENCES treatment(id)
   ON DELETE CASCADE,
-  PRIMARY KEY(id)
+  PRIMARY KEY(id),
+  INDEX (invoice_id, treatment_id) 
 );
