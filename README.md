@@ -161,7 +161,8 @@ Feel free to check the [issues page](../../issues/).
 ## ⭐️ Show your support <a name="support"></a>
 
 
-If you like this project...
+
+If you like this project pls give it a star
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,7 +171,16 @@ If you like this project...
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank...
+I would like to thank @Microverse
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
